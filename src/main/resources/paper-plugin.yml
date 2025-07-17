@@ -1,0 +1,26 @@
+name: Achievements
+version: "1.0"
+main: dev.marten_mrfcyt.achievements.Achievements
+api-version: "1.20"
+prefix: Achievements
+load: STARTUP
+authors: [Marten_mrfcyt]
+description: A hookable system that allows external plugins to easily register and manage custom achievements!
+
+commands:
+  achievements:
+    description: Main achievements command
+    usage: /<command> <complete|edit|reload> [args...]
+    permission: achievements.use
+    aliases: [ach, achievement]
+
+permissions:
+  achievements.use:
+    description: Allows use of basic achievement commands
+    default: true
+  achievements.edit:
+    description: Allows editing of achievements
+    default: op
+  achievements.reload:
+    description: Allows reloading of the achievement system
+    default: op
