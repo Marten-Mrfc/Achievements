@@ -3,3 +3,7 @@ subdir: Plugin
 
 before_install:
   - rm -rf ../Temporary/
+
+install:
+  - chmod +x gradlew
+  - ./gradlew publishToMavenLocal
