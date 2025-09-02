@@ -96,7 +96,7 @@ import TabItem from '@theme/TabItem';
   </TabItem>
   <TabItem value="kotlin" label="Kotlin">
     Nu heb je succesvol de dependencies toegevoegd, maar hoe gebruik je het nu in jouw Kotlin project?
-    
+
     Eerst maak je een register functie aan.
     ```kotlin
     private fun registerCustomAchievements() {
@@ -126,15 +126,15 @@ import TabItem from '@theme/TabItem';
 </Tabs>
 
 ## Visualisatie van de loop
-Hier is een simpele visualisatie van de loop die je moet volgen om achievements te registreren en te gebruiken in jouw plugin:
+Hier is een simpele visualisatie van de loop die achievements gebruikt om achievements te registreren en updaten.
 
 ```mermaid
 graph TD
   A[setupAchievements] --> B[setReloadHandler]
-  B --> C[achievements reload command]
-  C --> D[API triggers handler]
-  D --> E[registerCustomAchievements]
-  E --> F[update achievements]
+  B --> C[ /achievements reload]
+  C --> D[AchievementAPI triggerd de reloadHandler]
+  D --> E[registerCustomAchievements wordt uitgevoerd]
+  E --> F[achievements worden geüpdatet]
   F --> G[log complete]
   G --> C
 ```
