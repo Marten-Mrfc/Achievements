@@ -1,0 +1,11 @@
+name: Temporary
+version: '1.0-SNAPSHOT'
+main: dev.marten_mrfcyt.temporary.Temporary
+api-version: '1.20'
+dependencies:
+  server:
+    Achievements:
+      required: true
+      load: BEFORE
+      join-classpath: true
+load: POSTWORLD
