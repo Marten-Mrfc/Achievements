@@ -1,6 +1,5 @@
 # jitpack.yml
-before_install:
-  - rm -rf Temporary/  # Note: capital T for "Temporary"
+subdir: Plugin
 
-install:
-  - cd Plugin && ./gradlew publishToMavenLocal
+before_install:
+  - rm -rf ../Temporary/
