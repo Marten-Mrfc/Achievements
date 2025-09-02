@@ -1,0 +1,6 @@
+# jitpack.yml
+before_install:
+  - rm -rf temporary/  # Remove temporary folder before build
+
+install:
+  - ./gradlew :plugin:publishToMavenLocal  # Build only the plugin module
