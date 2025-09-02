@@ -1,9 +1,7 @@
 # jitpack.yml
-subdir: Plugin
-
 before_install:
-  - rm -rf ../Temporary/
+  - rm -rf Temporary/
 
 install:
-  - chmod +x gradlew
-  - ./gradlew publishToMavenLocal
+  - chmod +x Plugin/gradlew
+  - cd Plugin && ./gradlew publishToMavenLocal
