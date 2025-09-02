@@ -35,7 +35,10 @@ const config: Config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
   presets: [
     [
       'classic',
@@ -141,6 +144,10 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ['powershell', 'groovy', 'java'],
+    },
+    mermaid: {
+      theme: {light: 'neutral', dark: 'forest'},
     },
   } satisfies Preset.ThemeConfig,
 };
