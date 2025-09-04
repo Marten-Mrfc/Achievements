@@ -42,6 +42,7 @@ class Achievements : KotlinPlugin() {
             showToast(false)
             frame(AdvancementDisplay.Frame.TASK)
             background("husbandry")
+            hidden(true)
             requirements { true }
         }
 

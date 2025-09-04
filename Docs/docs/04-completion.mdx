@@ -1,0 +1,53 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Voltooien
+
+Om een achievement te voltooien moet je de speler het achievement geven. Dit kan met de volgende code:
+<Tabs groupId='language' queryString>
+  <TabItem value="java" label="Java" default>
+    ```java
+    AchievementAPI.complete();
+    ```
+> De complete functie verwacht 2 parameters:
+> - Player player: De speler die het achievement krijgt.
+> - String id: De id van het achievement dat je wilt completen.
+> ```java
+> @JvmStatic
+> public final fun complete(
+>     player: Player,
+>     achievementId: String
+> ): Boolean
+> ```
+
+Om dus de achievement `bijvoorbeeld` te voltooien doe je:
+```java
+AchievementAPI.complete(player, "bijvoorbeeld");
+```
+  </TabItem>
+  <TabItem value="kotlin" label="Kotlin">
+    ```kotlin
+    AchievementAPI.complete()
+    ```
+> De complete functie verwacht 2 parameters:
+> - Player player: De speler die het achievement krijgt.
+> - String id: De id van het achievement dat je wilt completen.
+> ```java
+> @JvmStatic
+> public final fun complete(
+>     player: Player,
+>     achievementId: String
+> ): Boolean
+> ```
+
+Om dus de achievement `bijvoorbeeld` te voltooien doe je:
+```kotlin
+AchievementAPI.complete(player, "bijvoorbeeld")
+```
+
+</TabItem>
+</Tabs>
+
+:::warning
+Achievements geeft **GEEN** rewards of beloningen. Deze zal je dus zelf moeten toevoegen in de code!
+:::

@@ -1,0 +1,56 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Aanmaken
+
+<Tabs groupId='language' queryString>
+  <TabItem value="java" label="Java" default>
+Om een Achievement aan te maken gebruik je de functie:
+  ```java
+  AchievementAPI.register();
+  ```
+> de register functie heeft de volgende parameters:
+>   - String id: De unieke id van het achievement (Altijd lowercase!).
+>   - AchievementBuilder builder: De builder die het achievement bouwt.
+>   ```java
+>   @JvmStatic
+>   public final fun register(
+>       id: String,
+>       builderAction: Consumer<AchievementBuilder>
+>   ): Unit
+>  ```
+Nu met deze kennis kunnen we een simpel achievement aanmaken:
+  ```java
+  AchievementAPI.register("voorbeeld", builderConsumer -> {
+    builderConsumer.title("De titel");
+    builderConsumer.description("Een beschrijving");
+    builderConsumer.icon(Material.DIAMOND);
+  });
+  ```
+  </TabItem>
+  <TabItem value="kotlin" label="Kotlin">
+Om een Achievement aan te maken gebruik je de functie:
+  ```kotlin
+  AchievementAPI.register()
+  ```
+> de register functie heeft de volgende parameters:
+>   - String id: De unieke id van het achievement.
+>   - AchievementBuilder builder: De builder die het achievement bouwt.
+>
+>   ```kotlin
+>   public final fun register(
+>     id: String,
+>     block: AchievementBuilder.() -> Unit
+>   ): Unit
+>   ```
+
+Nu met deze kennis kunnen we een simpel achievement aanmaken:
+  ```kotlin
+  AchievementAPI.register("voorbeeld") {
+    title("De titel")
+    description("Een beschrijving")
+    icon(Material.DIAMOND_SWORD)
+  }
+  ```
+</TabItem>
+</Tabs>

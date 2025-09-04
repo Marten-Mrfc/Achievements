@@ -1,0 +1,33 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Totaal voorbeeld
+Hier een totaal voorbeeld van een achievement met alle opties erin verwerkt.
+<Tabs groupId='language' queryString>
+  <TabItem value="java" label="Java" default>
+    ```java
+    AchievementAPI.register("voorbeeld", builderConsumer -> {
+        builderConsumer.title("De titel"); // verplicht
+        builderConsumer.description("Een beschrijving"); //verplicht
+        builderConsumer.icon(Material.BEDROCK);
+        builderConsumer.showToast(true); // Standaard true
+        builderConsumer.hidden(false); // Standaard false
+        builderConsumer.frame(AdvancementDisplay.Frame.CHALLENGE); // Standaard TASK
+        builderConsumer.parent("root"); // Optioneel
+    });
+    ```
+  </TabItem>
+  <TabItem value="kotlin" label="Kotlin">
+    ```kotlin
+    AchievementAPI.register("voorbeeld") {
+        title("De titel") // verplicht
+        description("Een beschrijving") //verplicht
+        icon(Material.BEDROCK)
+        showToast(true) // Standaard true
+        hidden(false) // Standaard false
+        frame(AdvancementDisplay.Frame.CHALLENGE) // Standaard TASK
+        parent("root") // Optioneel
+    }
+    ```
+</TabItem>
+</Tabs>

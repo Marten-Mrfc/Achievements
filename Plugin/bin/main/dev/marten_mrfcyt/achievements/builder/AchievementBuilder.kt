@@ -30,6 +30,7 @@ class AchievementBuilder {
     fun background(background: String?): AchievementBuilder = apply { this.background = background }
     fun parent(parent: String?): AchievementBuilder = apply { this.parent = parent }
     fun requirements(requirements: (Player) -> Boolean): AchievementBuilder = apply { this.requirements = requirements }
+    fun hidden(hidden: Boolean): AchievementBuilder = apply { this.hidden = hidden }
 
     fun build(): Achievement {
         require(id.isNotBlank()) { "Achievement ID cannot be blank" }

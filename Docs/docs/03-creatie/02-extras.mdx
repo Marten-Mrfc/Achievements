@@ -1,0 +1,71 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Extras
+Op deze pagina leer je wat handige extra features van een achievement builder.
+
+## Parents
+Je hebt nu een achievement aangemaakt maar hoe link je nou achievement A met achievement B? Dat doe je met parents.
+<Tabs groupId='language' queryString>
+  <TabItem value="java" label="Java" default>
+    Om een parent toe te voegen in java gebruik je:
+    ```java
+    builderConsumer.parent("voorbeeld");
+    ```
+  </TabItem>
+  <TabItem value="kotlin" label="Kotlin">
+    Om een parent toe te voegen in kotlin gebruik je:
+    ```kotlin
+    parent("voorbeeld")
+    ```
+</TabItem>
+</Tabs>
+parents zijn optioneel, je kan dus ook een achievement zonder parent aanmaken.
+
+## Frame
+Een frame is het soort kader dat om het achievement heen zit. Er zijn drie soorten frames:.
+
+| Onvoltooid | Voltooid | Frame |
+|-----------|----------|-------|
+| <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/d/d9/Advancement-plain-raw.png" width="52" alt="Task frame onvoltooid" /> | <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/f/f2/Advancement-plain-worn.png" width="52" alt="Task frame voltooid" /> | TASK |
+| <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/4/41/Advancement-oval-raw.png" width="52" alt="Goal frame onvoltooid" /> | <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/4/4c/Advancement-oval-worn.png" width="52" alt="Goal frame voltooid" /> | GOAL |
+| <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/9/96/Advancement-fancy-raw.png" width="52" alt="Challenge frame onvoltooid" /> | <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/5/5f/Advancement-fancy-worn.png" width="52" alt="Challenge frame voltooid" /> | CHALLENGE |
+
+<Tabs groupId='language' queryString>
+  <TabItem value="java" label="Java" default>
+    Om een frame toe te voegen in java gebruik je:
+    ```java
+    builderConsumer.frame(AdvancementDisplay.Frame.TASK);
+    ```
+  </TabItem>
+  <TabItem value="kotlin" label="Kotlin">
+    Om een frame toe te voegen in kotlin gebruik je:
+    ```kotlin
+    frame(AdvancementDisplay.Frame.TASK)
+    ```
+</TabItem>
+</Tabs>
+
+## Hidden
+Je kan een achievement ook verbergen. Dit betekent dat het niet zichtbaar is in de lijst met achievements totdat je het behaalt. 
+:::info
+Het liefst wil je als speler alle achievements zien daarom default deze waarde naar false!
+:::
+<Tabs groupId='language' queryString>
+  <TabItem value="java" label="Java" default>
+    Om een achievement te verbergen in java gebruik je:
+    ```java
+    builderConsumer.hidden(true);
+    ```
+  </TabItem>
+  <TabItem value="kotlin" label="Kotlin">
+    Om een achievement te verbergen in kotlin gebruik je:
+    ```kotlin
+    hidden(true)
+    ```
+</TabItem>
+</Tabs>
+
+
+## Andere
+Er zijn nog wel wat meer opties beschikbaar. Deze leg ik hier nu niet uit omdat deze tot wat ik denk niet nodig zullen zijn bij de meeste dingen.
